@@ -1,4 +1,4 @@
-# fido2
+# Capstone ADP Fido2 Authentication Project
 
 Server Authentication 
 

@@ -13,7 +13,7 @@ In order for the the front to connect with the backend a proxy file is necessary
 - [File](https://github.com/swapnilphanse/fido2/blob/master/frontend/proxy.conf.json)
 
 ## FIDO2 Server 
-The authentication server is based on a predefined/existing server found here [Server](https://github.com/Yubico/java-webauthn-server) allowing us to authenticate to pre-existing FIDO standards. You can look through the server architecture to gain the general grasp of how communications work between back-end components. This back-end server was adapted to current needs. Additional library references were used from the [WebAuth](https://github.com/ralscha/webauthn-demo). 
+The authentication server is based on a predefined/existing server found here [Server](https://github.com/Yubico/java-webauthn-server) allowing us to authenticate to pre-existing FIDO standards. You can look through the server architecture to gain the general grasp of how communications work between back-end components. This back-end server was adapted to current needs. Additional library references were used from the [WebAuth Demo](https://github.com/ralscha/webauthn-demo). 
 
 ### LocalHosting
 - For running the backend server you can use Maven, which is a build automation tool used primarily for Java projects. Running these commands into your local terminal `mvn clean install` then will allow installation of Maven `mvn spring-boot:run` will run the framework. 

@@ -1,0 +1,38 @@
+<ion-content class="ion-padding">
+  <form #form="ngForm" (keyup.enter)="form.valid && login(form.value)"
+        (ngSubmit)="form.valid && login(form.value)" novalidate>
+    <ion-grid>
+      <img src="../../assets/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+        <h2 style="text-align:center;color:black;font-weight:700">Login</h2>
+       
+      <ion-row class="ion-margin-top">
+        <ion-col>
+          <ion-item>
+          
+            <ion-input autocomplete="username" name="username" ngModel required type="text" placeholder="Username"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-button [disabled]="!form.valid" color="white "expand="block" shape="default" fill="solid" type="submit" class="my-button" >Sign In</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-margin-top">
+          <p style="text-align:center;color:#000000"> Don't have an account yet?</p>
+          <a routerDirection="forward"  routerLink="/reg">Sign Up</a>
+        </ion-col>
+        
+      </ion-row>
+<ion-row>
+      <ion-col>
+        <p style="text-align:center;color:black"> Recover Account</p>
+        <a routerDirection="forward"  routerLink="/recover">Here</a>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

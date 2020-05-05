@@ -1,0 +1,40 @@
+{
+  "name": "webauthn-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build-prod": "ng build --prod",
+    "postbuild-prod": "bread-compressor dist/app",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "9.1.2",
+    "@angular/common": "9.1.2",
+    "@angular/compiler": "9.1.2",
+    "@angular/core": "9.1.2",
+    "@angular/forms": "9.1.2",
+    "@angular/platform-browser": "9.1.2",
+    "@angular/platform-browser-dynamic": "9.1.2",
+    "@angular/router": "9.1.2",
+    "@github/webauthn-json": "^0.4.1",
+    "@ionic/angular": "5.0.7",
+    "rxjs": "6.5.5",
+    "tslib": "1.11.1",
+    "zone.js": "0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.901.1",
+    "@angular/cli": "9.1.1",
+    "@angular/compiler-cli": "9.1.2",
+    "@angular/language-service": "9.1.2",
+    "@ionic/angular-toolkit": "2.2.0",
+    "@types/node": "13.13.0",
+    "bread-compressor-cli": "1.1.0",
+    "codelyzer": "5.2.2",
+    "tslint": "6.1.1",
+    "typescript": "3.8.3"
+  }
+}

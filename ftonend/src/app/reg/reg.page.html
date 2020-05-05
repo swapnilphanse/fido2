@@ -1,0 +1,32 @@
+<ion-content class="ion-padding">
+  <form #regform="ngForm" (keyup.enter)="regform.valid"
+        (ngSubmit)="regform.valid" 
+        novalidate>
+    <ion-grid>
+      <img src="../../assets/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+        <h2 style="text-align:center;color:black;font-weight:700">Sign Up Request</h2>
+       
+      <ion-row class="ion-margin-top">
+        <ion-col>
+          <ion-item>
+          
+            <ion-input name="email" [(ngModel)]="dataset.email" #email="ngModel" required type="email" placeholder="Email Address"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <br>
+      <ion-row>
+        <ion-col>
+          <ion-button [disabled]="!regform.valid" (click)="regEmail()" color="white "expand="block" shape="default" fill="solid" type="submit" class="my-button" >Invite Me</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-margin-top">
+          <ion-button router-direction="back"  routerLink="/login"  color="red "expand="block" shape="default" fill="solid" type="submit" class="my-button1" >Back</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

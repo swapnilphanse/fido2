@@ -1,0 +1,123 @@
+<ion-content *ngIf="!recoveryToken" class="ion-padding">
+
+  <ion-segment (ionChange)="view = $event.target.value">
+    <ion-segment-button color="clear" expand="full" size="default"   type="submit" value="add">
+      <ion-label>Add</ion-label>
+    </ion-segment-button>
+    <ion-segment-button color="clear" expand="full"  size="default"  type="submit" value="recover">
+      <ion-label>Recover</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <form #recoverForm="ngForm" (ngSubmit)="recoverForm.valid && registerAdd(registrationAddCode.value)"
+  *ngIf="view === 'add'"
+  [ngFormOptions]="{updateOn: 'submit'}"
+  class="ion-margin-top" novalidate>
+<ion-grid>
+  <img src="../../assets/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+  <h2 style="text-align:center;color:black;font-weight:700">Register Additional Authenticator </h2>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label position="stacked">Add Authenticator Code</ion-label>
+      <ion-input #registrationAddCode="ngModel" autocapitalize="off" name="registrationAddCode" ngModel
+                 required spellcheck="false" type="text"></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-text *ngIf="recoverForm.submitted && registrationAddCode.invalid" color="danger">
+      <p *ngIf="registrationAddCode.errors.required" class="ion-padding-start">
+        Add Authenticator Code is required
+      </p>
+    </ion-text>
+    <ion-text *ngIf="submitError" color="danger">
+      <p *ngIf="submitError === 'addTokenInvalid'" class="ion-padding-start">
+        Add Authenticator Code invalid
+      </p>
+    </ion-text>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col class="ion-margin-top">
+    <ion-button color="white" class="my-button" expand="block" type="submit" class="my-button">Register</ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col class="ion-margin-top">
+    <ion-button router-direction="back"  routerLink="/login"  color="red "expand="block" shape="default" fill="solid" type="submit" class="my-button1" >Back</ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</form>
+
+
+
+  <form #recoverForm="ngForm" (ngSubmit)="recoverForm.valid && recover(recoveryCode.value)"
+  *ngIf="view === 'recover'"
+  [ngFormOptions]="{updateOn: 'submit'}"
+class="ion-margin-top" novalidate>
+<ion-grid>
+  <img src="../../assets/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+  <h2 style="text-align:center;color:black;font-weight:700">Recover Account</h2>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label position="stacked">Recovery Code</ion-label>
+    <ion-input #recoveryCode="ngModel" autocapitalize="off" name="recoveryCode" ngModel required
+               spellcheck="false" type="text"></ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+
+<ion-row>
+<ion-col>
+  <ion-text *ngIf="recoverForm.submitted && recoveryCode.invalid" color="danger">
+    <p *ngIf="recoveryCode.errors.required" class="ion-padding-start">
+      Recovery Code is required
+    </p>
+  </ion-text>
+  <ion-text *ngIf="submitError" color="danger">
+    <p *ngIf="submitError === 'recoveryTokenInvalid'" class="ion-padding-start">
+      Recovery Code invalid
+    </p>
+  </ion-text>
+</ion-col>
+</ion-row>
+
+<ion-row>
+<ion-col class="ion-margin-top">
+  <ion-button color="white" expand="block" class="my-button" type="submit" class="my-button">Register</ion-button>
+</ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col class="ion-margin-top">
+    <ion-button router-direction="back"  routerLink="/login"  color="red "expand="block" shape="default" fill="solid" type="submit" class="my-button1" >Back</ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</form>
+
+
+
+</ion-content>
+
+
+<ion-content *ngIf="recoveryToken" class="ion-padding ion-text-center">
+  <ion-grid>
+    
+      <img src="../../assets/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+    <h2 style="text-align:center;color:black;font-weight:700">Recovery Successful</h2>
+  <ng-container *ngIf="recoveryToken !== 'OK'">
+    <p style="text-align:center;color:black;">Your new recovery code:</p>
+    <code style="text-align:center;color:black;font-weight:700">{{recoveryToken}}</code>
+    <p style="text-align:justify;color:black;">To recover your account, you need acccess to this code. Store it in a safe place or write it down somewhere.</p>  
+  </ng-container>
+</ion-grid>
+</ion-content>

@@ -15,8 +15,8 @@ In order for the the front to connect with the backend a proxy file is necessary
 ## FIDO2 Server 
 The authentication server is based on a predefined/existing server found here [Server](https://github.com/Yubico/java-webauthn-server) allowing us to authenticate to pre-existing FIDO standards. You can look through the server architecture to gain the general grasp of how communications work between back-end components. This back-end server was adapted to current needs. 
 
-## LocalHosting
-- For running the backend server you can use Maven, which is a build automation tool used primarily for Java projects. Running these commands into your local terminal `mvn clean install` then `mvn spring-boot:run` will allow installation of Maven. 
+### LocalHosting
+- For running the backend server you can use Maven, which is a build automation tool used primarily for Java projects. Running these commands into your local terminal `mvn clean install` then will allow installation of Maven `mvn spring-boot:run` will run the framework. 
 
 - Running it on Eclipse is an alternative solution. If running on eclipse select maven build option and in the popup enter spring-boot:run in the goals value.
 
@@ -24,3 +24,7 @@ The authentication server is based on a predefined/existing server found here [S
 Ensure you are in the directory of the project once it is compiled. In a terminal enter the command `npm install`. Additionally install `angular cli` alongside `node` to ensure everything will be accessible. Once completed the command `ng serve --open --port 8100` will open the website through your local browser automatically. Connection to the frontend once the backend is up can be done through port 8100. If there are any issues ensure port 8100 is available and not being used by another process.  
 
 ## Database
+
+Storing information on the database is done through MySQL Database. Where once registered the user information will be stored in different fields. Allowing access to general information. 
+
+![alt text](https://github.com/swapnilphanse/fido2/blob/master/Photos/PHOTO1.jpg)

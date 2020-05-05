@@ -1,0 +1,26 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="primary">
+    <ion-button (click)="logout()" class="ion-margin-top">Logout
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Dashboard</ion-title>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1 style="color:black">Welcome, {{secret}}</h1>
+
+
+  <ion-button (click)="requestRegisterAdditionalAuthenticator()" fill="clear" style="color:black;text-align:center">Register additional Authenticator
+  </ion-button>
+  <p *ngIf="registrationAddToken" style="color:black">
+    Enter the following code in the field "Add Authenticator Code" and register the authenticator. The new authenticator
+    will be assigned to this account.
+  </p>
+  <div class="ion-text-center">
+    <code style="color:black">{{registrationAddToken}}</code>
+  </div>
+ 
+</ion-content>

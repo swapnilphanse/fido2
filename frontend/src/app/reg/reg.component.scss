@@ -1,0 +1,47 @@
+a {
+    color:black;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: block;
+    text-align: center;
+    text-decoration:none;
+    font-weight:700;
+ }
+ 
+ a:hover {
+     color: red!important;
+ }
+ 
+ ion-button [type="submit"]{
+     border: none;
+     --width: 250px;
+     background: white;
+     color: #000;
+     font-size: 16px;
+     line-height: 100px;
+     padding: 10px 0;
+     border-radius: 100px;
+     cursor: pointer;
+ 
+ }
+
+ .my-button:hover{
+    background-color: red!important;
+    background-size: auto;
+    font-family: sans-serif;
+    color:white;
+   
+}
+ 
+ .my-button1 {
+     background-color:red;
+     color:white;
+ }
+ .my-button1:hover{
+     background-color: white!important;
+     color:black;
+     background-size: auto;
+     font-family: sans-serif;
+     color:black;
+    
+ }

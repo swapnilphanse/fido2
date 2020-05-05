@@ -1,0 +1,57 @@
+ion-grid{
+	background:rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    width: 350px;
+    margin: auto;
+    height: 430px;
+    margin-top: 150px;
+    font-family: sans-serif;
+
+   
+}
+ion-content{    
+	margin:0;
+	padding:0;
+	--background: url(src\assets\adp.jpg) 0 0/100% 100% no-repeat ;
+	background-size: 300px 100px;
+  	height: 100%;
+  	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+ion-item{
+    --background:transparent;
+    --color:black;
+ }
+ion-input [type="text"]	{
+    border-bottom: .5px solid rgb(255, 0, 0);
+    --border:none;
+	--height:10px;
+	--font-size: 15px;
+}
+ion-button{
+    font-family: sans-serif;
+    color:#000000;
+}
+
+.my-button:hover{
+    background-color: red!important;
+    background-size: auto;
+    font-family: sans-serif;
+    color:white;
+   
+}
+
+.my-button1:hover {
+    background-color: white;
+    color:black;
+}
+
+.my-button1{
+    background-color: red;
+    background-size: auto;
+    font-family: sans-serif;
+    color:white;
+   
+}
